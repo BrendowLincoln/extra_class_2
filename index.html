@@ -9,11 +9,18 @@
     </head>
     <body>
 
+        <header>
+            <div id="info-message"></div>
+        </header>
+
         <main>
             <table class="calculator-container">
                 <tr>
-                    <td id="input-cell" colspan="4">
-                        <input readonly type="text" name="input-number" id="input-number">
+                    <td id="input-cell" colspan="3">
+                        <input disabled readonly type="text" name="input-number" id="input-number">
+                    </td>
+                    <td id="clear-input-button-cell">
+                        <button class="clear-input-button" onclick="clearInput()">X</button>
                     </td>
                 </tr>
                 <tr class="buttons-row">
@@ -63,7 +70,7 @@
                 </tr>
                 <tr class="buttons-row">
                     <td>
-                        <button class="basic-button basic-button__clear" onclick="clearInput()">C</button>
+                        <button class="basic-button basic-button__clear" onclick="clearValues()">C</button>
                     </td>
                     <td>
                         <button class="basic-button" onclick="setValue(0)">0</button>
